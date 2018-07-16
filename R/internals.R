@@ -50,7 +50,7 @@
   total_records <- as.integer(res$headers$`x-total-count`)
   if (length(total_records) == 0) total_records <- 1L
   records <- res$result
-  cat(paste("Downloading", total_records, "record(s)..."))
+  cat(paste("Downloading", total_records, "record(s)...\n"))
 
   # If you have not yet retrieved all records, calculate the # of remaining calls required
   extra_calls <- ifelse(
